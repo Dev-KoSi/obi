@@ -1,21 +1,16 @@
-import { useEffect, useState } from "react"
-import './sendMsg.css'
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import './home.css'
 
-export function SendMsg() {
+
+export function Menu({setMenu}) {
     const [message, setMessage] = useState('');
-    const [username, setUsername] = useState('');
+    const username = 'AdminSika';
 
     const [prmtTrue, setPrmtTrue] = useState(false);
 
     const [prmtFalse, setPrmtFalse] = useState(false);
 
     const [prompt, setPrompt] = useState('');
-    
-    useEffect(() => {
-        const path = window.location.pathname.replace('/', '');
-        setUsername(path);
-    }, []);
 
     const sendMsgFunc = async () => {
         try {
@@ -47,10 +42,8 @@ export function SendMsg() {
         }
     }
 
-    return (
-        <div className="sendmsg-page">
-            <div style={{marginTop : '10px'}}></div>
-
+    return(
+        <div>
             {prmtTrue && <div style={{backgroundColor: 'green', margin : '0 auto', width : 'fit-content'}} className="sign-notice">
                 {prompt}
             </div>}
@@ -58,33 +51,36 @@ export function SendMsg() {
             {prmtFalse && <div style={{backgroundColor: 'red', margin : '0 auto', width : 'fit-content'}} className="sign-notice">
                 {prompt}
             </div>}
-            
-            <div className="sendmsg">
-                <div className="sendmsg-field">
-                    <div className="sendmsg-to">
-                        <div className="sendmsg-obi">Ob!</div>
 
-                        <div className="username">
-                        Send anonymous message to {username.length > 8 ? username.slice(0, 8) + '...' : username}
-                        </div>
-                    </div>
+            <div className="close-icon">
+                <svg onClick={() => {
+                    setMenu(true);
+                }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" color="#ffffff" fill="none">
+                    <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+            </div>
 
-                    <div className="msg-area">
-                        <textarea value={message} onChange={(e) => {
-                            setMessage(e.target.value);
-                        }} placeholder="say something..."></textarea>
-                    </div>
+            <div className="feedback-field">
+                <div className="com-txt">
+                    Kindly let us know what to improve on.
+                </div>
 
-                {message.length > 0 && <div className="sendmsg-btn">
+                <textarea value={message} onChange={(e) => {
+                    setMessage(e.target.value);
+                }} placeholder='say something...'></textarea>
+                {message.length > 0 && <div className='sendfb-btn'>
                     <button onClick={() => {
                         sendMsgFunc();
-                    }}>Send 🚀</button>
+                    }}>Send feedback</button>
                 </div>}
-                </div>
+            </div>
 
-                <div className="get-account">
-                    <Link to={'/signup'}><button className="animated">Create your account for free</button></Link>
-                </div>
+            <div className="logout-btn">
+                <button onClick={() => {
+                    navigate('/login');
+
+                    localStorage.clear();
+                }}>Log Out</button>
             </div>
         </div>
     )

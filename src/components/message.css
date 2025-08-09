@@ -3,13 +3,9 @@
     top: 35%;
     z-index: 1;
 }
-.close-icon{
-    text-align: right;
-}
 
 .message-page{
     height: 100vh;
-    /* display: none; */
 }
 .message{
     margin-bottom: 30px;

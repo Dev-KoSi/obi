@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './home.css'
 import { Link, useNavigate } from 'react-router-dom';
+import { Menu } from './menu';
 
 export function Home({
     expiredToken}) {
@@ -17,7 +18,7 @@ export function Home({
 
     const navigate = useNavigate();
 
-    const userURL = `http://localhost:5173/${username}`;
+    const userURL = `https://obi-rose.vercel.app/${username}`;
 
     useEffect( () => {
         const home = async () => {
@@ -45,21 +46,7 @@ export function Home({
     return (
         <div className="profile-page">
             {!menu && <div className="menu-page">
-                <div className="close-icon">
-                    <svg onClick={() => {
-                        setMenu(true);
-                    }} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" color="#ffffff" fill="none">
-                        <path d="M18 6L6.00081 17.9992M17.9992 18L6 6.00085" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </div>
-
-                <div className="logout-btn">
-                    <button onClick={() => {
-                        navigate('/login');
-
-                        localStorage.clear();
-                    }}>Log Out</button>
-                </div>
+                <Menu setMenu={setMenu}/>
             </div>}
 
             {menu && <div className="profile">

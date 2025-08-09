@@ -4,7 +4,7 @@
     text-align: center;
 }
 .sendmsg-field{
-    margin: 25px;
+    margin: 25px 25px 100px 25px;
     box-shadow: 0 0px 20px lightgray;
     border-radius: 20px;
 }
@@ -33,15 +33,18 @@
     font-family: "Kaushan Script", cursive;
 }
 .sendmsg-btn button{
-    width: 50%;
+    width: 90%;
     border: none;
-    margin-bottom: 100px;
-    background-color: #00df82;
-    padding: 15px 0px;
+    margin: 10px 0px;
+    background-color: black;
+    padding: 10px 0px;
     cursor: pointer;
-    font-size: 22px;
-    /* color: white; */
-    border-radius: 20px;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+.sendmsg-btn :hover{
+    background-color: #00df82;
 }
 .get-account button{
     width: 90%;

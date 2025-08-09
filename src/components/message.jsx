@@ -15,7 +15,7 @@ export function Message({
 
     const username = localStorage.getItem('username');
     
-    const userURL = `http://localhost:5173/${username}`;
+    const userURL = `https://obi-rose.vercel.app/${username}`;
 
     const userId = localStorage.getItem('userId');
 
@@ -89,7 +89,7 @@ export function Message({
 
             <div style={{marginBottom : '100px'}}></div>
 
-            <div onClick={() => {
+            {myMessages && <div onClick={() => {
                 if(preview == true) {
                     setPreview(false);
                     setBlurPage('');
@@ -122,7 +122,7 @@ export function Message({
                 </div>
             
             <div style={{color : 'white'}}>.</div>
-            </div>
+            </div>}
 
             {!myMessages && <div className="if-no-msg">
                 <div className='oops'>
