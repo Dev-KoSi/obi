@@ -7,6 +7,10 @@ export function Home({
     expiredToken}) {
 
     expiredToken();
+    
+    const token = localStorage.getItem('token');
+    
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -20,12 +24,8 @@ export function Home({
     const [menu, setMenu] = useState(true);
 
     const username = localStorage.getItem('username');
-    
-    const token = localStorage.getItem('token');
 
     const [notice, setNotice] = useState(false);
-
-    const navigate = useNavigate();
 
     const userURL = `https://obi-rose.vercel.app/${username}`;
 
@@ -80,7 +80,7 @@ export function Home({
                 </div>
 
                 <div className="hi">
-                    Hi, {username.length > 8 ? username.slice(0, 8) + '...' : username} 👋
+                    Hi, {username && username.length > 8 ? username.slice(0, 8) + '...' : username} 👋
                 </div>
                 <div className="wlcm-note">
                     Share your link. Receive real, unfiltered messages from the people who know you — or think they do.

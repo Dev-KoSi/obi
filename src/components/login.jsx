@@ -51,6 +51,8 @@ export function Login() {
 
                 localStorage.setItem('userId', res.userId);
 
+                localStorage.setItem('loginTime', Date.now().toString());
+
                 navigate('/');
             } else {
                 setPrompt(res.prompt);
