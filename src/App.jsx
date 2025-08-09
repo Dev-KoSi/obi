@@ -44,7 +44,7 @@ export function App() {
       )
     },
     {
-      path : '/home',
+      path : '/',
       element : (
         <div>
           <Home expiredToken={expiredToken}/>

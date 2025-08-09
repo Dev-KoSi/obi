@@ -21,7 +21,7 @@ export function Login() {
         if(token === null) {
             navigate('/login');
         } else {
-            navigate('/home');
+            navigate('/');
         }
     }, []);
 
@@ -51,7 +51,7 @@ export function Login() {
 
                 localStorage.setItem('userId', res.userId);
 
-                navigate('/home');
+                navigate('/');
             } else {
                 setPrompt(res.prompt);
                 setPrmt(true);

@@ -40,7 +40,7 @@ export function Signup() {
 
                 localStorage.setItem('userId', res.user._id);
 
-                navigate('/home');
+                navigate('/');
             } else {
                 setPrompt(res.prompt);
                 setPrmt(true);
