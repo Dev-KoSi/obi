@@ -8,6 +8,15 @@ export function Home({
 
     expiredToken();
 
+    useEffect(() => {
+
+        if(token === null) {
+            navigate('/login');
+        } else {
+            navigate('/');
+        }
+    }, []);
+
     const [menu, setMenu] = useState(true);
 
     const username = localStorage.getItem('username');
