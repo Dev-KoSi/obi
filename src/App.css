@@ -1,0 +1,22 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+svg{
+    cursor: pointer;
+}
+button{
+    cursor: pointer;
+}
+.Link{
+    text-decoration: none;
+    color: #03624c;
+    font-weight: bold;
+}
+.Link :hover {
+    text-decoration: underline;
+    color: #00df82;
+}
+.hover :hover{
+    background-color: #00df82;
+}

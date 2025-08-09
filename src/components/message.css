@@ -1,0 +1,82 @@
+.screenshot-preview{
+    position: fixed;
+    top: 35%;
+    z-index: 1;
+}
+.close-icon{
+    text-align: right;
+}
+
+.message-page{
+    height: 100vh;
+    /* display: none; */
+}
+.message{
+    margin-bottom: 30px;
+}
+.blur-page{
+    filter: blur(50px);
+}
+.msg-header{
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 10px ;
+    margin-top: -1px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.back-icon{
+    width: 30%;
+}
+.anony-msg-txt{
+    font-size: 20px;
+}
+.msg-body-cover{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+.msg-body{
+    margin: 25px;
+    box-shadow: 0 10px 30px lightgrey;
+    border-radius: 20px;
+}
+.msg-body :first-child{
+    background-color: #00df82;
+    border-radius: 20px 20px 0px 0px;
+    padding: 10px 0px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.msg-body :nth-child(2) {
+    padding: 10px;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+}
+.msg-time{
+    text-align: right;
+    width: 95%;
+    padding:10px 0px;
+    font-style: italic;
+    font-family: 'Consolas', 'Courier New', 'Lucida Console', monospace;
+}
+
+.if-no-msg{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+.oops{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    font-style: italic;
+}
+.no-msg{
+    font-size: 18px;
+    margin-bottom: 150px;
+}

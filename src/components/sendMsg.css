@@ -1,0 +1,51 @@
+.sendmsg{
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+.sendmsg-field{
+    margin: 25px;
+    box-shadow: 0 0px 20px lightgray;
+    border-radius: 20px;
+}
+.sendmsg-to{
+    font-size: 18px;
+    padding: 5px;
+    background-color: #00df82;
+    border-radius: 20px 20px 0px 0px;
+}
+.sendmsg-field textarea{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 100px;
+    margin: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.sendmsg-obi{
+    width: 300px;
+    text-align: left;
+    font-size: 25px;
+    font-family: "Kaushan Script", cursive;
+}
+.sendmsg-btn button{
+    width: 50%;
+    border: none;
+    margin-bottom: 100px;
+    background-color: #00df82;
+    padding: 15px 0px;
+    cursor: pointer;
+    font-size: 22px;
+    /* color: white; */
+    border-radius: 20px;
+}
+.get-account button{
+    width: 90%;
+    padding: 30px 5px;
+    margin-top: 50px;
+    font-weight: bold;
+}
