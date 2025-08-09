@@ -1,10 +1,13 @@
 import { useState } from "react";
 import './home.css'
+import { useNavigate } from "react-router-dom";
 
 
 export function Menu({setMenu}) {
     const [message, setMessage] = useState('');
     const username = 'AdminSika';
+
+    const navigate = useNavigate();
 
     const [prmtTrue, setPrmtTrue] = useState(false);
 
