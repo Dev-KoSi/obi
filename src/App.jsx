@@ -60,7 +60,7 @@ export function App() {
       )
     },
     {
-      path : `${username}`,
+      path : `/:username`,
       element : (
         <div>
           <SendMsg/>

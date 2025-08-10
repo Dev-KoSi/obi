@@ -44,26 +44,28 @@
     background-color: #00df82;
     border-radius: 20px 20px 0px 0px;
     padding: 10px 0px;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: bold;
 }
 .msg-body :nth-child(2) {
-    padding: 10px;
-    font-size: 20px;
+    padding: 20px ;
+    font-size: 22px;
     background-color: white;
     border-radius: 0px 0px 20px 20px;
 }
 .msg-time{
     text-align: right;
     width: 95%;
-    padding:10px 0px;
+    padding: 0px 0px 10px 0px;
     font-style: italic;
     font-family: 'Consolas', 'Courier New', 'Lucida Console', monospace;
 }
 
 .if-no-msg{
-    width: fit-content;
-    margin: 0 auto;
+    position: fixed;
+    top: 15%;
+    right: 0;
+    left: 0;
     text-align: center;
 }
 .oops{

@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react"
 import './sendMsg.css'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export function SendMsg() {
     const [message, setMessage] = useState('');
-    const [username, setUsername] = useState('');
 
     const [prmtTrue, setPrmtTrue] = useState(false);
 
@@ -12,10 +11,7 @@ export function SendMsg() {
 
     const [prompt, setPrompt] = useState('');
     
-    useEffect(() => {
-        const path = window.location.pathname.replace('/', '');
-        setUsername(path);
-    }, []);
+    const {username} = useParams();
 
     const sendMsgFunc = async () => {
         try {
@@ -65,7 +61,7 @@ export function SendMsg() {
                         <div className="sendmsg-obi">Ob!</div>
 
                         <div className="username">
-                        Send anonymous message to {username.length > 8 ? username.slice(0, 8) + '...' : username}
+                        Send anonymous message to <span style={{fontWeight : 'bold'}}>@{username}</span>
                         </div>
                     </div>
 

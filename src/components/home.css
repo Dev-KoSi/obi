@@ -94,11 +94,11 @@
     border: 1px solid white;
 }
 .hi{
-    font-size: 40px;
-    margin: 20px 0px 0px 5px;
+    font-size: 25px;
+    margin-left: 10px;
 }
 .wlcm-note{
-    margin-left: 5px;
+    margin-left: 10px;
 }
 .menu svg{
     color: black;
@@ -111,7 +111,7 @@
 .p-b button{
     width: 80%;
     border: none;
-    margin: 20px 0px;
+    margin-bottom: 30px;
     background-color: black;
     padding: 15px 0px;
     cursor: pointer;
@@ -185,6 +185,8 @@
 }
 .copy-share svg{
     margin: 0px 0px -7px 5px;
+    padding-left: 5px;    
+    background-color: white;
 }
 .gap{
     margin-bottom: 10px;

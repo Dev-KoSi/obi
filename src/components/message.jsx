@@ -19,7 +19,7 @@ export function Message({
 
     const userId = localStorage.getItem('userId');
 
-    const [myMessages, setMyMessages] = useState(null);
+    const [myMessages, setMyMessages] = useState([]);
     
     function formatDateTime(isoString) {
         const dateObj = new Date(isoString);
@@ -124,7 +124,7 @@ export function Message({
             <div style={{color : 'white'}}>.</div>
             </div>}
 
-            {!myMessages && <div className="if-no-msg">
+            {myMessages.length < 1 && <div className="if-no-msg">
                 <div className='oops'>
                     Oops!
                 </div>

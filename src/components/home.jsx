@@ -80,7 +80,7 @@ export function Home({
                 </div>
 
                 <div className="hi">
-                    Hi, {username && username.length > 8 ? username.slice(0, 8) + '...' : username} 👋
+                    Hi, {username && username.length > 10 ? username.slice(0, 10) + '...' : username} 👋
                 </div>
                 <div className="wlcm-note">
                     Share your link. Receive real, unfiltered messages from the people who know you — or think they do.
