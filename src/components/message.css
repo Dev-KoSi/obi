@@ -24,11 +24,10 @@
     right: 0;
     left: 0;
 }
-.back-icon{
-    width: 30%;
-}
 .anony-msg-txt{
+    width: 100%;
     font-size: 20px;
+    text-align: center;
 }
 .msg-body-cover{
     width: fit-content;
