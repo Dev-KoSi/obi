@@ -47,11 +47,11 @@ export function Menu({setMenu}) {
 
     return(
         <div>
-            {prmtTrue && <div style={{backgroundColor: 'green', margin : '0 auto', width : 'fit-content'}} className="sign-notice">
+            {prmtTrue && <div style={{backgroundColor: 'green', position : 'fixed', top : '5%', right : '0', left : '0'}} className="sign-notice">
                 {prompt}
             </div>}
 
-            {prmtFalse && <div style={{backgroundColor: 'red', margin : '0 auto', width : 'fit-content'}} className="sign-notice">
+            {prmtFalse && <div style={{backgroundColor: 'red', position : 'fixed', top : '5%', right : '0', left : '0'}} className="sign-notice">
                 {prompt}
             </div>}
 

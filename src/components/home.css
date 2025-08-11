@@ -53,9 +53,9 @@
     top: 300px;
 }
 .logout-btn button{
-    width: 90%;
+    width: 330px;
     border: none;
-    margin-top: 20px;
+    margin: 20px 0px;
     background-color: red;
     padding: 10px 0px;
     cursor: pointer;
@@ -98,7 +98,7 @@
     margin-left: 10px;
 }
 .wlcm-note{
-    margin-left: 10px;
+    margin: 0px 5px 0px 10px;
 }
 .menu svg{
     color: black;
@@ -109,9 +109,9 @@
     top: 150px;
 }
 .p-b button{
-    width: 80%;
+    width: 310px;
     border: none;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
     background-color: black;
     padding: 15px 0px;
     cursor: pointer;
@@ -157,7 +157,7 @@
     text-align: center;
     width: fit-content;
     margin: 0 auto;
-    padding: 10px 30px;
+    padding: 10px;
     font-size: 23px;
 }
 .c-s-txt{
@@ -192,8 +192,6 @@
     margin-bottom: 10px;
 }
 .notice {
-    width: fit-content;
-    margin: 0 auto;
     background-color: black;
     color: white;
     padding: 10px 20px;

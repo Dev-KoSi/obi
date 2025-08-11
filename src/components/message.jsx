@@ -19,7 +19,7 @@ export function Message({
 
     const userId = localStorage.getItem('userId');
 
-    const [myMessages, setMyMessages] = useState([]);
+    const [myMessages, setMyMessages] = useState(() => JSON.parse(localStorage.getItem('messages')) || []);
     
     function formatDateTime(isoString) {
         const dateObj = new Date(isoString);
@@ -44,6 +44,7 @@ export function Message({
 
                 const res = await req.json();
 
+                localStorage.setItem('messages', JSON.stringify(res.message));
                 setMyMessages(res.message);
             } catch (error) {
                 console.log(error);
@@ -101,7 +102,7 @@ export function Message({
                         setPreview(true);
                         setBlurPage('blur-page')
                     }}>
-                        {myMessages ?.map((m) => (
+                        {myMessages ?.slice().reverse().map((m) => (
                             <div onClick={() => {
                                 setMessagePreview(m.message);
                             }} className="msg-body">
